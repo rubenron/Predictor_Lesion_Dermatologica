@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <title>Analizador de Lesiones en la Piel</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #4267B2, #23395B);
+            font-family: Arial, sans-serif;
+        }
+
+        #resultado {
+            font-size: 1.5rem;
+            color: #333;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        #imagen-preview {
+            border: 1px solid #ccc;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .header-text {
+            text-align: center;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .btn-primary-custom {
+            background-color: #1877F2;
+            border: none;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: #fff;
+        }
+
+        .btn-primary-custom:hover {
+            background-color: #145dbf;
+        }
+
+        .info-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 30px auto;
+        }
+
+        .technical-details {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4"><strong>ANALIZADOR DE LESIONES EN LA PIEL</strong></h1>
+
+        
+        <div class="header-text">
+            <p>Maria Fernanda Quintero, Rubén Rondón, Maria Alejandra Marin</p>
+            <p>Taller 1: Architecting with Google Computer Engine</p>
+            <p>UNIVERSIDAD EL BOSQUE</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3 text-center">
+                <div class="info-container">
+                    <input type="file" id="input-imagen" class="form-control mb-3" accept="image/*">
+                    <img id="imagen-preview" src="" alt="Imagen de lesión" style="display: none;">
+                    <div id="resultado" class="mt-3"></div>
+                    <button id="analizar" class="btn btn-primary-custom">Analizar Imagen</button>
+                </div>
+            </div>
+        </div>
+        <div class="technical-details">
+            <h4>Características Técnicas del Modelo:</h4>
+            <p>- Precisión promedio ponderada: <strong>0.90</strong></p>
+            <p>- Exactitud global del modelo: <strong>0.87</strong></p>
+            <p>El modelo fue entrenado con un total de 938 imágenes de lesiones de diferentes tipos.</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
